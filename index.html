@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="cursor"></div>
+    
+    <div id="app">
+
+    <div class="main-background">
+    <div id="header_wrap">
+        <header class="header_inner">
+            <h1>
+                <a href="#">Art:ical</a>
+            </h1>
+                    <ul class="util_menu">
+                        <li><a href="#" class="gnb">Home</a></li>
+                        <li><a href="#" class="gnb">Login</a></li>
+                        <li><a href="#" class="gnb">Sitemap</a></li>
+                    </ul>
+
+                        <input type="checkbox" id="menu" @click="sidemd = !sidemd">
+                        <label for="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                    <nav id="nav">
+                        <h2 hidden>메인메뉴</h2>
+                        
+                        <ul>
+                            <li @mouseover="down1 = true" 
+                            @mouseleave="down1 = false">
+                                <a href="#">ARTISTS</a>
+                                <transition name="slide">
+                                <ul v-show="down1">
+                                    <li><a href="#" class="gnb">Lee Bae</a></li>
+                                    <li><a href="#" class="gnb">Yoo Jung hyun</a></li>
+                                    <li><a href="#" class="gnb">Choi Byung Hoon</a></li>
+                                    <li><a href="#" class="gnb">Susan Derges</a></li>
+                                </ul>
+                                </transition>
+                            </li>
+
+                            <li @mouseover="down2 = true" 
+                            @mouseleave="down2 = false">
+                                <a href="#">EXHIBITIONS</a>
+                                <transition name="slide">
+                                <ul v-show="down2">
+                                    <li><a href="#" class="gnb">CORRENT</a></li>
+                                    <li><a href="#" class="gnb">UPCOMING</a></li>
+                                    <li><a href="#" class="gnb">PAST</a></li>
+                                </ul>
+                                </transition>
+                            </li>
+
+                            <li @mouseover="down3 = true" 
+                            @mouseleave="down3 = false">
+                                <a href="#">CONTACT</a>
+                                <transition name="slide">
+                                <ul v-show="down3">
+                                    <li><a href="#" class="gnb">ADDRESS</a></li>
+                                    <li><a href="#" class="gnb">MAP VIEW</a></li>
+                                    <li><a href="#" class="gnb">TEL</a></li>
+                                </ul>
+                                </transition>
+                            </li>
+
+                            <li @mouseover="down4 = true" 
+                            @mouseleave="down4 = false">
+                                <a href="#">SUBCULTURE</a>
+                                <transition name="slide">
+                                <ul v-show="down4">
+                                    <li><a href="#" class="gnb">OBJET</a></li>
+                                    <li><a href="#" class="gnb">CLOTHES</a></li>
+                                    <li><a href="#" class="gnb">ACCESSORY</a></li>
+                                </ul>
+                                </transition>
+                            </li>
+                        </ul>
+                    </nav>
+        </header>
+    </div>
+    </div>
+    <div class="next1_wrap">
+        <h4>Introduce</h4> <br><br>
+        <div class="next1_container">
+
+            <div class="next1_item d1">
+                <div class="white_box"></div>
+                <div class="next1_text">
+                    <h4>Joy</h4>
+                    <button class="modal_btn gnb" @click="modal1=true">Information</button>
+                </div>
+            </div>
+
+            <div class="next1_item d2">
+                <div class="white_box"></div>
+                <div class="next1_text">
+                    <h4>Anger</h4>
+                    <button class="modal_btn gnb" @click="modal2=true">Information</button>
+                </div>
+            </div>
+
+            <div class="next1_item d3">
+                <div class="white_box"></div>
+                <div class="next1_text">
+                    <h4>Sorrow</h4>
+                    <button class="modal_btn gnb" @click="modal3=true">Information</button>
+                </div>
+            </div>
+
+            <div class="next1_item d4">
+                <div class="white_box"></div>
+                <div class="next1_text">
+                    <h4>Pleasure</h4>
+                    <button class="modal_btn gnb" @click="modal4=true">Information</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="next2_wrap">
+        <section>
+            <div class="center">
+                <div class="sc sc-right sc1">
+                    <div class="overlay">
+                        <div class="text_box">
+                            <span class="text"></span><span class="blink">|</span>
+                        </div>
+                    </div>
+                    <img src="./artical/KakaoTalk_20220405_154703272.jpg" class="sc-img1">
+                    <div class="ob">
+                        <p>
+                            articul 
+                            푸른 바다의 도시 해운대에서 느껴지는 이 따뜻한 감정을
+                            봄바람이 시작되는 계절과 함께 시작한다. 공기마저 깊은 고
+                            요함으로 물들이게 하는 'ARTHICUL'과 함께 할 수 있음에
+                            영광을 느낀다.
+                        </p>
+                    </div>
+                </div>
+                <div class="three-content">
+                    <div class="three-block" style="background-image:url(./artical/01.jpg)">
+                        <button class="three-btn">Objet1</button>
+                    </div>
+                    <div class="three-block" style="background-image:url(./artical/02.jpg)">
+                        <button class="three-btn">Objet2</button>
+                    </div>
+                    <div class="three-block" style="background-image:url(./artical/03.jpg)">
+                        <button class="three-btn">Objet3</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center">
+                <div class="three-content2">
+                    <div class="three-block" style="background-image:url(./artical/01.jpg)">
+                        <button class="three-btn">Objet4</button>
+                    </div>
+                    <div class="three-block" style="background-image:url(./artical/02.jpg)">
+                        <button class="three-btn">Objet5</button>
+                    </div>
+                    <div class="three-block" style="background-image:url(./artical/03.jpg)">
+                        <button class="three-btn">Objet6</button>
+                    </div>
+                </div>
+                <div class="sc sc-left sc2">
+                    <div class="overlay2">
+                        <div class="text_box">
+                            <span class="text2"></span><span class="blink">|</span>
+                        </div>
+                    </div>
+                    <div class="ob2">
+                        <p>
+                            layer 파도처럼 반복되는 4개의 감정으로 전하는 소리를 준
+                            비해보았다.
+                            나에게 차이는 있는 그대로 인정하는 것이 아니라 새롭게
+                            만들어가야 할 것이며, 현재와 다른 모습으로 변이함으로써
+                            생성되는 것이다. 반복되는 행위는 결코 같은 것이 아니며
+                            늘 차이를 두고 새롭게 다가선다.
+                        </p>
+                    </div>
+                    <img src="./artical/02.jpg" class="sc-img2">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="next3_wrap"> 
+        <iframe width="100%" height="600" frameborder="0"
+        src="https://www.youtube.com/embed/dlG4Dm5Q46o?autoplay=1&mute=1&controls=0"
+        frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="next4_wrap">
+        <div class="left-side side side-left">
+            <img src="./artical/s1.jpg" class="next4-img">
+        </div>
+        <div class="center-side side side-center">
+            <img src="./artical/s2.jpg" class="next4-img">
+        </div>
+        <div class="right-side side side-right">
+            <img src="./artical/s3.jpg" class="next4-img">
+        </div>
+    </div>
+
+    <div class="next5_wrap">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="slideshow-text">
+                    <div class="slideshow-text-p">
+                        <h1>Whisper of The : Heart</h1>
+                        <p>귀를 기울이면</p>
+                    </div>
+                </div>
+                <img src="./artical/KakaoTalk_20220405_154703272_08.jpg" class="slideshow-img">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="slideshow-text">
+                    <div class="slideshow-text-p">
+                        <h1>ARTICUL SECOND</h1>
+                        <p>exhibition in 2022</p>
+                    </div>
+                </div>
+                <img src="./artical/KakaoTalk_20220405_154703272_09.jpg" class="slideshow-img">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="slideshow-text">
+                    <div class="slideshow-text-p">
+                        <h1>작가 육건우</h1>
+                        <p>@6gunwoo</p>
+                    </div>
+                </div>
+                <img src="./artical/KakaoTalk_20220405_154703272_10.jpg" class="slideshow-img">
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+            
+    </div>
+
+    <div class="next6_wrap">
+        <div class="copyright-container">
+            <div class="copyright-content">
+                <p> 
+                    TEL : 010-6516-4275 <br>
+                    OPEN : 12:00 - 21:00 <br>
+                    24 / 7
+                    YOOK GUN WOO 육건우 - Whisper of The Heart <br>
+                    1 APR - 30 JUN, 2022
+                </p>
+            </div>
+            <div class="copyright-content2">
+                <p>
+                    -- 위의 사진들과 정보는 해운대 아티컬 카페, <br>
+                        해운대 조현화랑 전시회의 사진과 제가 직접 찍은 사진을 토대로 <br>
+                        사용하였습니다.
+                </p>
+            </div>
+            <div class="copyright-content3">
+                <p>
+                    해운대 Articul :  <a href="https://www.instagram.com/arthicul/">https://www.instagram.com/arthicul/</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <transition name="modal-fade">
+        <div class="black-bg" v-if="modal1 == true">
+            <div class="white-bg">
+                <div class="image-bg1"></div>
+                <div class="content-bg">
+                    <h3>JOY : 喜</h3>
+                    <br>
+                    <p class="p-size">
+                        부산 조현화랑 달맞이와 해운대, 서울 갤러리2, 
+                        그리고 제주도 갤러리2 중선농원에서 이배 개인전이 동시에 열린다.
+                        조현화랑 달맞이와 갤러리2에서는 Issu du feu를 비롯 
+                        Landscape, Acrylic medium, Drawing등이 전시되며, 
+                        조현화랑 해운대, 갤러리2, 중선농원에서는 대형 설치 작품인 
+                        Landscape, Suspens를 선보인다. 
+                        신작 Drawing 시리즈를 비롯 총 30여 점이 공개되는 
+                        이번 개인전은 숯을 통해 삶과 예술에 대한 작가의 태도를 보여준다.
+                    </p>
+                </div>
+                <button @click="modal1 = false" class="x">X</button>
+            </div>
+        </div>
+    </transition>
+    <transition name="modal-fade">
+        <div class="black-bg" v-if="modal2 == true">
+            <div class="white-bg">
+                <div class="image-bg2"></div>
+                <div class="content-bg">
+                    <h3>ANGER : 怒</h3>
+                    <br>
+                    <p class="p-size">
+                        결핍이 주는 불안을 통해 내면 켜켜이 쌓인 나의 감정의 운
+                        율을 이번 전시에 담았다. 천을 감싸고 덧입히는 반복적인
+                        행위를 통해 완전한 형질전환을 이룬다.
+                        과거, 현재, 미래의 모든 작업을 통해 자아 개념상에 긍정적
+                        인 변화를 일으키고 사회로부터 조금 더 가까이 다가갈 수
+                        있는 소도구가 되기를 희망한다.
+                        나라는 개인의 존재가 죽음과 소멸되어진 이후에 남게 되는 것은 
+                        어떤 것이 있을까? 
+                    </p>
+                </div>
+                <button @click="modal2 = false" class="x">X</button>
+            </div>
+        </div>
+    </transition>
+    <transition name="modal-fade">
+        <div class="black-bg" v-if="modal3 == true">
+            <div class="white-bg">
+                <div class="image-bg3"></div>
+                <div class="content-bg">
+                    <h3>SORROW : 哀</h3>
+                    <br>
+                    <p class="p-size">
+                        나에게 차이는 있는 그대로 인정하는 것이 아니라 새롭게 만들어 가야
+                        할 것이며, 현재와 다른 모습으로 변이함으로써 생성되는것이다. 반복되는
+                        행위는 결코 같은 것이 아니며 늘 차이를 두고 새롭게 다가선다. 그런 차이들이
+                        반복되어 변용된 주체를 쌓아가는 것이다.
+                        결핍이 주는 불안을 통해 내면 켜켜이 쌓인 나의 감정을 운율을 이번 전시에 담았다
+                        천을 감싸고 덧입히는 반복적인 행위를 통해 완전한 형질전환을 이룬다.
+                        생각대로 살아가는가? 사는 대로 생각하는가? 
+                    </p>
+                </div>
+                <button @click="modal3 = false" class="x">X</button>
+            </div>
+        </div>
+    </transition>
+    <transition name="modal-fade">
+        <div class="black-bg" v-if="modal4 == true">
+            <div class="white-bg">
+                <div class="image-bg4"></div>
+                <div class="content-bg">
+                    <h3>PLEASURE : 樂</h3>
+                    <br>
+                    <p class="p-size">
+                        본능적으로 우리는 삶 속에서 행복을 추구하고자 한다. 그러나 행복은 
+                        존재하지 않는다. 목표와 행동이 선행되어야 비로소 찰나의 순간으로 행복은
+                        스쳐지나 간다. 인간 존재의 본질은 자신이 이루고자 하는 사회적 활동과 목표를 통해 가치를
+                        실재화 하고자 한다. 그 실재화된 모습은 눈에 보이지 않지만 행복이라는 감정으로 느끼게 된다.
+                        그러나 그 행복의 대부분은 만족으로 오인하는 경우이다.
+                        소멸하고 있는 이 모든 것들에 대하여 우리는 어떠한 자세를 취하고 있는지를
+                        그려보고자 한다. 열정은 영원하지 않으며 모든 것은 소멸하게 되어있다.
+                    </p>
+                </div>
+                <button @click="modal4 = false" class="x">X</button>
+            </div>
+        </div>
+        </transition>
+
+        <transition name="modal-side">
+            <div class="sidemodal-bg" v-if="sidemd">
+            </div>
+        </transition>
+
+        <transition name="modal-side2">
+            <div class="sidemodal-black" v-if="sidemd">
+            </div>
+        </transition>
+
+    </div>
+
+    <script>
+        new Vue({
+            el : "#app",
+            data : {
+                down1 : false,
+                down2 : false,
+                down3 : false,
+                down4 : false,
+                drawer : false,
+                modal1 : false,
+                modal2 : false,
+                modal3 : false,
+                modal4 : false,
+                sidemd : false,
+            },
+            methods : {},
+            computed : {
+                
+            },
+            vuetify : new Vuetify(),
+        })
+    </script>
+
+    <script>
+        let mouseCursor = document.querySelector(".cursor");
+        let navLinks = document.querySelectorAll(".gnb"); //메뉴 링크
+        //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
+        window.addEventListener("wheel", cursor);
+        window.addEventListener("mousemove", cursor);
+        //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
+        function cursor(e) {
+            mouseCursor.style.left = e.pageX + "px";
+            mouseCursor.style.top = e.pageY + "px";
+        }
+    </script>
+
+    <script>
+        navLinks.forEach((link) => {
+            link.addEventListener("mouseover", () => {
+                mouseCursor.classList.add("cursor-grow");
+                mouseCursor.style.zIndex = "1000";
+                link.classList.add("hovered-link");
+            });
+            link.addEventListener("mouseleave", () => {
+                mouseCursor.classList.remove("cursor-grow");
+                mouseCursor.style.zIndex = "100000";
+                link.classList.remove("hovered-link");
+            });
+        });
+    </script>
+
+    <script>
+        const scTriggerMargin = 200;
+        const scElementList = document.querySelectorAll('.sc');
+
+        const scfunction = function() {
+            for(const element of scElementList) {
+                if (!element.classList.contains('show')) {
+                    if (window.innerHeight > element.getBoundingClientRect().top + scTriggerMargin) {
+                        element.classList.add('show');
+                    }
+                }
+            }
+        }
+        window.addEventListener('load',scfunction);
+        window.addEventListener('scroll',scfunction);
+    </script>
+    
+    <script>
+        const content = 
+        "Lee Bae 이배, \n Dimensions / 245 x 340 (mm) \n Binding / Soft Cover Pages 32 \n ISBN 979-11-86724-03-3";
+        const text = document.querySelector(".text");
+        let i = 0;
+
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+            if (i > content.length) {
+                text.textContent = "";
+                i = 0;
+            }
+        }
+        setInterval(typing, 100)
+    </script>
+
+    <script>
+        const content2 = 
+        "Lee Bae 이배, \n Dimensions / 245 x 340 (mm) \n Binding / Harder Cover Pages 45 \n ISBN 956-09-86624-05-3";
+        const text2 = document.querySelector(".text2");
+        let m = 0;
+
+        function typing(){
+            let txt = content2[m++];
+            text2.innerHTML += txt=== "\n" ? "<br/>": txt;
+            if (m > content2.length) {
+                text2.textContent = "";
+                m = 0;
+            }
+        }
+        setInterval(typing, 100)
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <script>
+        const scTriggerMargin2 = 100;
+        const scElementList2 = document.querySelectorAll('.side');
+
+        const scfunction2 = function() {
+            for(const element of scElementList2) {
+                if (!element.classList.contains('show')) {
+                    if (window.innerHeight > element.getBoundingClientRect().top + scTriggerMargin2) {
+                        element.classList.add('show');
+                    }
+                }
+            }
+        }
+        window.addEventListener('load',scfunction2);
+        window.addEventListener('scroll',scfunction2);
+    </script>
+</body>
+</html>

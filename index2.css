@@ -1,0 +1,864 @@
+html {
+    --color-texta : #1d1d1d;
+    --color-textb : #fff;
+}
+body {
+    cursor: none;
+}
+a:hover {
+    cursor: none;
+}
+button:hover {
+    cursor: none;
+}
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--color-textb);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    backdrop-filter: sepia(20%);
+    background-size: cover;
+}
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.main-background {
+    background-image: url(./artical/SE-e7242ed4-1f02-41c8-8055-fd69e900f7e1.jpg);
+    background-size: 100%;
+    width: 100%;
+    height: 700px;
+    z-index: -100;
+}
+.header_wrap {
+    background-color: black;
+    opacity: 0.5;
+    margin-bottom: 40px;
+}
+#header_wrap h1{
+    font-family: 'MapoFlowerIsland';
+    opacity: 0.8;
+    text-align: center;
+    padding-top: 5px;
+}
+#header_wrap h1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+.header_inner {
+    position: relative;
+    height: 120px;
+}
+.util_menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+}
+.util_menu li {
+    float: left;
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.util_menu li a {
+    font-family: 'MapoFlowerIsland';
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+}
+#nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+#nav > ul > li {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+#nav > ul > li > a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    height: 45px;
+    padding-top: 10px;
+    opacity: 0.5;
+    font-family: 'MapoFlowerIsland';
+}
+#nav ul ul {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    width: 180px;
+    margin-left: -90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+}
+#nav ul ul li {
+    list-style: none;
+    font-family: 'MapoFlowerIsland';
+}
+#nav ul ul a {
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    height: 40px;
+    text-align: center;
+}
+.clear {
+    clear: both;
+}
+.next1_wrap {
+    background-color: white;
+    opacity: 1;
+}
+.open {
+    display: block;
+}
+.slide-enter-to, .slide-leave {
+    max-height: 100px;
+    overflow: hidden;
+}
+.slide-enter, .slide-leave-to {
+    overflow: hidden;
+    max-height: 0;
+}
+.slide-enter-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.slide-leave-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.next1_wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.next1_wrap h4 {
+    font-family: 'MapoFlowerIsland';
+    font-size: 20px;
+}
+.next1_item {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 350px;
+}
+.next1_container {
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+}
+.next1_text {
+    color: white;
+    padding: 50px;
+    width: 100px;
+}
+.d1 {
+    background-image: url(./artical/1.jpg);
+}
+.d2 {
+    background-image: url(./artical/2.jpg);
+}
+.d3 {
+    background-image: url(./artical/3.jpg);
+}
+.d4 {
+    background-image: url(./artical/4.jpg);
+}
+.white_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    border: 0px solid white;
+    transition: border 1s;
+}
+.white_box:hover {
+    border: 30px solid white;
+}
+/*---------------------------------------------------------------------------------------*/
+
+/* hover된 링크의 글자 색상 정의(하얀색)*/
+/* .hovered-link 선택자명은 추후 JS로 추가할 예정!*/
+.hovered-link {
+    color: khaki !important;
+}
+/* .gnb li a:hover::after의 svg에 배경이미지 지정!*/
+
+.cursor-grow {
+    transform: scale(2);
+    z-index: 100;
+}
+
+
+.appli {
+    display: none;
+}
+
+.bottom-app {
+    display: none;
+}
+
+.modal_btn {
+    z-index: 1000;
+    position: relative;
+    font-size: 10px;
+    font-family: 'MapoFlowerIsland';
+}
+.black-bg {
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 2px black; 
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.modal-fade-enter-active, .modal-fade-leave-active {
+    transition: opacity 0.5s;
+}
+.modal-fade-enter, .modal-fade-leave-to {
+    opacity: 0;
+}
+.white-bg {
+    position: fixed;
+    width: 1200px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 100px;
+    left: 160px;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+}
+.image-bg1 {
+    float: left;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    background-image: url(./artical/04.jpg);
+    background-size: cover;
+}
+.image-bg2 {
+    float: left;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    background-image: url(./artical/11.jpg);
+    background-size: cover;
+}
+.image-bg3 {
+    float: left;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    background-image: url(./artical/10.jpg);
+    background-size: cover;
+}
+.image-bg4 {
+    float: left;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    background-image: url(./artical/03.jpg);
+    background-size: cover;
+}
+.content-bg {
+    float: left;
+    width: 550px;
+    height: 400px;
+    font-family: 'MapoFlowerIsland';
+}
+.x {
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 20px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    right: 100px;
+    top: 20px;
+}
+.content-bg h3 {
+    text-align: center;
+}
+.p-size {
+    position: relative;
+    margin-left: 30px;
+    word-spacing: 10px;
+    line-height: 30px;
+}
+
+.next2_wrap {
+    clear: both;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+}
+.center {
+    width: 100%;
+    height: 400px;
+}
+.sc1 {
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 400px;
+    opacity: 0.8;
+    right: 0;
+    margin-right: 50%;
+    z-index: 100;
+}
+.sc2 {
+    position: absolute;
+    background-color: black;
+    width: 50%;
+    height: 400px;
+    opacity: 0.8;
+    margin-top: 50px;
+    margin-left: 50%;
+}
+.sc {
+    opacity: 0;
+    transition: all .5s ease;
+}
+.sc-right {
+    transform: translate(-200px,0);
+}
+.sc-left {
+    transform: translate(200px,0);
+}
+.sc.show {
+    opacity: 1;
+    transform: none;
+}
+.sc-img1 {
+    width:50%; 
+    height: 300px; 
+    position: absolute; 
+    left: 30px; 
+    top: 40px;
+}
+.sc-img2 {
+    width:50%; 
+    height: 300px; 
+    position: absolute; 
+    right: 30px; 
+    top: 40px;
+}
+.ob:hover {
+    color: white;
+}
+.ob2:hover {
+    color: white;
+}
+.ob {
+    font-family: 'MapoFlowerIsland';
+    color:black; 
+    text-align: center; 
+    font-size: 15px;
+    line-height: 25px;
+    transition: all 2s ease;
+    width: 200px; 
+    height: 300px; 
+    position: absolute; 
+    right: 60px; 
+    top: 40px;
+}
+.ob2 {
+    font-family: 'MapoFlowerIsland';
+    color:black; 
+    text-align: center; 
+    font-size: 15px;
+    line-height: 25px;
+    transition: all 2s ease;
+    width: 200px; 
+    height: 300px; 
+    position: absolute; 
+    left: 60px; 
+    top: 40px;
+}
+
+.overlay {
+    width: 100%; 
+    height: 100%; 
+    background-color: black;
+    color: black;
+    margin-top: 0%; 
+    transition: all 2s;
+}
+.sc1:hover .overlay {
+    margin-left: 100%;
+    color: white;
+}
+.overlay2 {
+    width: 100%; 
+    height: 100%; 
+    background-color: black;
+    color: black;
+    margin-top: 0%; 
+    transition: all 2s;
+}
+.sc2:hover .overlay2 {
+    margin-left: -100%;
+    color: white;
+}
+.text_box{
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'MapoFlowerIsland';
+}
+.blink {
+    animation: blink 1s infinite;
+    font-size: 2.5rem;
+}
+.three-content {
+    width:50%;
+    height:400px;
+    position:absolute; 
+    right: 0;
+}
+.three-content2 {
+    width:50%;
+    height:400px;
+    position:absolute; 
+    left: 0;
+    margin-top: 50px;
+}
+.three-block {
+    position: relative;
+    width:32%; 
+    height:100%; 
+    border: 1px solid white;
+    display: inline-block;
+    transition: all 1s ease;
+}
+.three-btn {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    display: block;
+    color: white;
+    text-align: left;
+    top: 5px;
+    left: 5px;
+    transition: all 1s ease;
+    opacity: 0;
+}
+.three-block:hover {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.three-block:hover .three-btn {
+    opacity: 1;
+}
+.next4_wrap {
+    width: 100%;
+    height: 800px;
+}
+.left-side {
+    float: left;
+    width: 33%;
+    height: 600px;
+    background-color: black;
+}
+.center-side {
+    float: left;
+    width: 34%;
+    height: 600px;
+    background-color: blue;
+}
+.right-side {
+    float: left;
+    width: 33%;
+    height: 600px;
+    background-color: grey;
+}
+.next4-img {
+    width: 100%;
+    height: 100%;
+}
+.side {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.side.show {
+    opacity: 1;
+    transform: none;
+}
+.side-right {
+    transform: translate(-200px,0);
+}
+.side-left {
+    transform: translate(200px,0);
+}
+.side-center {
+    transform: scale(.5);
+}
+/*--------------------------------------------------------------------------------------*/
+.mySlides {
+    width: 100%;
+    display: none;
+    top: 30px;
+    position: relative;
+}
+.slideshow-text {
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    color: white;
+    font-family: 'MapoFlowerIsland';
+    text-align: center;
+}
+.slideshow-text-p {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 45%;
+}
+.slideshow-img {
+    position: absolute;
+    width: 50%; 
+    height: 500px;
+    right: 30px;
+}
+.slideshow-container {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    text-align: center;
+}
+.dot {
+    top: 550px;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: khaki;
+}
+.fade {
+    -webkit-animation-name: fade; /* -webkit은 크롬규격이기에 아래와 중복 */
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade { /* 이것도 아래와 중복 */
+    from {opacity: 0.4}  /* from은  끝단락 */
+    to {opacity: 1} /* to는 첫단락 */
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+@keyframes blink {
+    to {
+    opacity: 0;
+    }
+}
+/*---------------------------------------------------------------------------------------*/
+input[id="menu"] + label {
+    display: none;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    top: -40px;
+    left: 15px;
+}
+input[id="menu"] + label span {
+    height: 4px;
+    width: 60%;
+    border-radius: 30px;
+    display: block;
+    position: absolute;
+    background-color: white;
+    z-index: 100000;
+    transition: all 0.5s;
+}
+input[id="menu"] {
+    display: none;
+}
+input[id="menu"] + label span:nth-child(1) {
+    top: 0;
+}
+input[id="menu"] + label span:nth-child(2) {
+    top: 45%;
+}
+input[id="menu"] + label span:nth-child(3) {
+    bottom: 0;
+}
+input[id="menu"]:checked + label span:nth-child(1) {
+    width: 50%;
+    transform: rotate(45deg);
+    top: 43%;
+}
+input[id="menu"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menu"]:checked + label span:nth-child(3) {
+    width: 50%;
+    transform: rotate(-45deg);
+    bottom: 43%;
+}
+.sidemodal-bg {
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid 2px black; 
+    position: fixed; 
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.sidemodal-black {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    top: 0;
+    background-color: black;
+}
+.modal-side-enter-to {
+    opacity: 1;
+}
+.modal-side-enter {
+    opacity: 0;
+}
+.modal-side-enter-active {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.modal-side-leave-to {
+    opacity: 0;
+}
+.modal-side-leave {
+    opacity: 1;
+}
+.modal-side-leave-active {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.modal-side2-enter-to {
+    left: 0%;
+}
+.modal-side2-enter {
+    left : -100%
+}
+.modal-side2-enter-active {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.modal-side2-leave-to {
+    left: -100%;
+}
+.modal-side2-leave {
+    left : 0%
+}
+.modal-side2-leave-active {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.next6_wrap {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+.copyright-container {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    font-size: 13px;
+    font-family: 'MapoFlowerIsland';
+}
+.copyright-content {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    color: black;
+    text-align: left;
+    font-weight: bolder;
+}
+.copyright-content2 {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    right: 0;
+    color: black;
+    text-align: left;
+}
+.copyright-content3 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    display: inline-block;
+    right: 0;
+    color: black;
+    text-align: left;
+}
+/*---------------------------------------------------------------------------------------*/
+@media screen and (max-width:1024px) {
+    .next1_container {
+        max-width: 600px;
+    }
+    .white-bg {
+        justify-content: center;
+        margin: auto;
+        width: 600px;
+    }
+    .image-bg {
+        height: 200px;
+        background-image: url(./조현화랑/1-1.jpg);
+    }
+    .content-bg {
+        padding-top: 10px;
+        float: left;
+        width: 500px;
+        height: 200px;
+        font-family: 'MapoFlowerIsland';
+        font-size: 12px;
+    }
+    .p-size {
+        word-spacing: 15px;
+        line-height: 25px;
+    }
+    .sc1 {
+        width: 50%;
+    }
+    .sc2 {
+        width: 50%;
+    }
+    .ob {
+        opacity: 0;
+    }
+    .sc-img1 {
+        width: 80%;
+    }
+    .sc-img2 {
+        width: 80%;
+    }
+    .slideshow-img {
+        right: 5px;
+    }
+    .next3_wrap {
+        height: 500px;
+    }
+    .side {
+        height: 400px;
+    }
+}
+@media screen and (max-width:768px) {
+    /* 헤더 영역 */
+    #header_wrap{background: none;}
+    .header_inner{height: auto;}
+    #header_wrap h1{background-color: black;padding: 0;}
+    #header_wrap picture{display: inline-block;width: 30.125%;/*241px*/min-width:145px;padding: 10px 0;}  
+
+    #nav ul li {
+        display: none;
+    }
+    .next1_container {
+        max-width: 600px;
+    }
+    .next1_item {
+        object-fit: fill;
+        float: none;
+        width: 100%;
+    }
+    .appli {
+        display: block;
+    }
+    .bottom-app {
+        display: block;
+    }
+    .white-bg {
+        justify-content: center;
+        left: 30px;
+        width: 600px;
+    }
+    .image-bg {
+        object-fit: contain;
+        height: 200px;
+        background-image: url(./조현화랑/1-1.jpg);
+    }
+    .content-bg {
+        padding-top: 10px;
+        float: left;
+        width: 500px;
+        height: 200px;
+        font-family: 'MapoFlowerIsland';
+        font-size: 12px;
+    }
+    .p-size {
+        word-spacing: 15px;
+        line-height: 25px;
+    }
+    .sc1 {
+        width: 50%;
+    }
+    .sc2 {
+        width: 50%;
+    }
+    .ob {
+        opacity: 0;
+    }
+    .sc-img1 {
+        width: 80%;
+    }
+    .sc-img2 {
+        width: 80%;
+    }
+    .slideshow-img {
+        right: 5px;
+    }
+    input[id="menu"] + label {
+        display: block;
+    }
+}

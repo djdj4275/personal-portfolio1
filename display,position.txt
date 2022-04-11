@@ -1,0 +1,4 @@
+position : absolute = 부모요소를 기준으로 배치
+position : relative = 자기 자신을 기준으로 배치
+position : fixed = 뷰포트 기준으로 배치
+position : stickey = 스크롤 영역 기준으로 배치
