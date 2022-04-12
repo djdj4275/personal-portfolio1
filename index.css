@@ -1,7 +1,3 @@
-html {
-    --color-texta : #1d1d1d;
-    --color-textb : #fff;
-}
 body {
     cursor: none;
 }
@@ -20,7 +16,7 @@ button:hover {
 .cursor {
     width: 3rem;
     height: 3rem;
-    border: 2px solid var(--color-textb);
+    border: 2px solid khaki;
     border-radius: 50%;
     position: absolute;
     z-index: 100000;
@@ -642,7 +638,6 @@ input[id="menu"]:checked + label span:nth-child(3) {
     bottom: 43%;
 }
 .sidemodal-bg {
-    z-index: 10000;
     background-color: rgba(0, 0, 0, 0.5);
     border: solid 2px black; 
     position: fixed; 
@@ -700,6 +695,39 @@ input[id="menu"]:checked + label span:nth-child(3) {
     transition-duration: 0.5s;
     transition-timing-function: ease;
 }
+.sidemodal-nav {
+    width:100%;
+    height: 80%; 
+    background-color: black;
+    top: 60px; 
+    position: absolute;
+}
+.sidemodal-list {
+    margin: auto;
+    width: 90%;
+    height: 10%;
+    background-color: black;
+    text-align: center;
+    color: gray;
+    transition: all 1s ease;
+}
+.sidemodal-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.sidemodal-link:link {
+    color: gray;
+}
+.sidemodal-link:visited {
+    color: gray;
+}
+.sidemodal-list:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+.sidemodal-list:hover .sidemodal-link {
+    color: black;
+}
 
 .next6_wrap {
     width: 100%;
@@ -718,30 +746,80 @@ input[id="menu"]:checked + label span:nth-child(3) {
 .copyright-content {
     position: absolute;
     width: 50%;
-    height: 50%;
+    height: 40%;
     display: inline-block;
     color: black;
     text-align: left;
     font-weight: bolder;
+    top: 20px;
 }
 .copyright-content2 {
     position: absolute;
     width: 50%;
-    height: 50%;
+    height: 80%;
     display: inline-block;
     right: 0;
     color: black;
     text-align: left;
+    font-weight: bolder;
+    top: 20px;
 }
 .copyright-content3 {
     position: absolute;
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 40%;
     bottom: 0;
     display: inline-block;
     right: 0;
     color: black;
     text-align: left;
+    font-weight: bolder;
+    bottom: 0;
+}
+
+i {
+    font-size: 25px;
+}
+.copyright-link:link {
+    color: black;
+}
+.copyright-link:visited {
+    color: black;
+}
+.copyright-link:hover {
+    color: gray;
+}
+
+.next6_wrap_mobile {
+    display: none;
+    height:100px; 
+    background-image: linear-gradient(to bottom,black,white);
+    position: relative;
+}
+.next6_wrap_mobile_content {
+    height:30px; 
+    bottom:0; 
+    position:absolute;
+}
+.next6_wrap_mobile_icon {
+    display: inline;
+    width: 5px;
+    height: 5px;
+}
+.next6_wrap_mobile_icon:visited {
+    color: black;
+}
+.next6_wrap_mobile_icon:hover {
+    color: gray;
+}
+i {
+    font-size: 20px;
+}
+.next6_wrap_mobile_text {
+    font-family: 'MapoFlowerIsland';
+    font-size: 13px;
+    display: inline;
+    right: 0;
 }
 /*---------------------------------------------------------------------------------------*/
 @media screen and (max-width:1024px) {
@@ -830,4 +908,41 @@ input[id="menu"]:checked + label span:nth-child(3) {
     }
     .content-bg {
         padding-top: 10px;
-                                    (‚   @ÌÌ»»                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        float: left;
+        width: 500px;
+        height: 200px;
+        font-family: 'MapoFlowerIsland';
+        font-size: 12px;
+    }
+    .p-size {
+        word-spacing: 15px;
+        line-height: 25px;
+    }
+    .sc1 {
+        width: 50%;
+    }
+    .sc2 {
+        width: 50%;
+    }
+    .ob {
+        opacity: 0;
+    }
+    .sc-img1 {
+        width: 80%;
+    }
+    .sc-img2 {
+        width: 80%;
+    }
+    .slideshow-img {
+        right: 5px;
+    }
+    input[id="menu"] + label {
+        display: block;
+    }
+    .next6_wrap {
+        display: none;
+    }
+    .next6_wrap_mobile {
+        display: block;
+    }
+}
