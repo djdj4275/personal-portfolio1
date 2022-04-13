@@ -802,9 +802,13 @@ i {
     position:absolute;
 }
 .next6_wrap_mobile_icon {
+    margin-left: 10px;
     display: inline;
     width: 5px;
     height: 5px;
+}
+.next6_wrap_mobile_icon:link {
+    color: black;
 }
 .next6_wrap_mobile_icon:visited {
     color: black;
@@ -816,6 +820,7 @@ i {
     font-size: 20px;
 }
 .next6_wrap_mobile_text {
+    margin-left: 10px;
     font-family: 'MapoFlowerIsland';
     font-size: 13px;
     display: inline;
