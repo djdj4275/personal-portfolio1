@@ -21,6 +21,7 @@
   * HTML
   * CSS
   * Java Script
+  * Vue,Vuetify
 
 ---
 
