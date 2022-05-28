@@ -31,7 +31,7 @@
 ![2](https://user-images.githubusercontent.com/99634816/170812731-a5d6be96-3a4c-4a12-b8e3-8e49210c59bb.PNG)
 3. **특정 컨텐츠 클릭시 모달창 구현**
 ![3](https://user-images.githubusercontent.com/99634816/170812922-520aa4d3-65eb-49b0-b525-f5d3f64912c7.PNG)
-4. **스크롤 이벤트 구현**
+4. **스크롤 이벤트 구현(컨텐츠들 나타남)**
 ![4](https://user-images.githubusercontent.com/99634816/170812928-22b19c13-4aaa-4bdb-948e-fab863b1d945.jpg)
 5. **컨텐츠 설명 타이핑 이벤트 구현**
 ![5](https://user-images.githubusercontent.com/99634816/170812941-d6738167-41b7-4310-be4e-267a7de1fffa.PNG)
