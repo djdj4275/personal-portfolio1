@@ -1,4 +1,4 @@
-<h1 class="blue">0. 목차</h1>
+<h1 style="color: blue">0. 목차</h1>
 
 1. 프로젝트 주제
 2. 프로젝트 사용된 스택
@@ -8,7 +8,7 @@
 
 ---
 
-<h1 class="blue">1. 프로젝트 주제</h1>
+<h1 style="color: blue">1. 프로젝트 주제</h1>
 
 ## **- Artical -**
 
@@ -16,7 +16,7 @@
 
 ---
 
-<h1 class="blue">2. 프로젝트 사용된 스택</h1>
+<h1 style="color: blue">2. 프로젝트 사용된 스택</h1>
 <ul>
   <li>HTML</li>
   <li>CSS</li>
@@ -25,7 +25,7 @@
 
 ---
 
-<h1 class="blue">3. 프로젝트 기능</h1>
+<h1 style="color: blue">3. 프로젝트 기능</h1>
 <ul>
   <li>마우스 디자인 & 특정 링크 호버시 트랜지션</li>
   <img src="./1.png" width="400px">
@@ -35,9 +35,3 @@
   <li>컨텐츠 설명 타이핑 이벤트 구현</li>
 
 </ul>
-
-<style>
-  .blue {
-    color : blue;
-  }
-</style>
