@@ -1,4 +1,4 @@
-<h1 style="color: blue">0. 목차</h1>
+<h1>0. 목차</h1>
 
 1. 프로젝트 주제
 2. 프로젝트 사용된 스택
@@ -8,7 +8,7 @@
 
 ---
 
-<h1 style="color: blue">1. 프로젝트 주제</h1>
+<h1>1. 프로젝트 주제</h1>
 
 ## **- Artical -**
 
@@ -16,7 +16,7 @@
 
 ---
 
-<h1 style="color: blue">2. 프로젝트 사용된 스택</h1>
+<h1>2. 프로젝트 사용된 스택</h1>
 <ul>
   <li>HTML</li>
   <li>CSS</li>
@@ -25,10 +25,10 @@
 
 ---
 
-<h1 style="color: blue">3. 프로젝트 기능</h1>
+<h1>3. 프로젝트 기능</h1>
 <ul>
   <li>마우스 디자인 & 특정 링크 호버시 트랜지션</li>
-  <img src="![1](https://user-images.githubusercontent.com/99634816/170812069-12352bb8-c440-4c71-b148-2c83653c01b2.PNG)
+  ![1]<img src="![1](https://user-images.githubusercontent.com/99634816/170812069-12352bb8-c440-4c71-b148-2c83653c01b2.PNG)
 " width="400px">
   <li>상단 네브바 구현</li>
   <li>특정 컨텐츠 클릭시 모달창 구현</li>
