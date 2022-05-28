@@ -6,50 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- 구글 마테리얼 아이콘, 뷰, 뷰티파이, 폰트어썸, css파일 -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="./index.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
-    <style>
-        
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
 </head>
 <body>
-
+    <!-- 마우스 커서 모양을 대신할 div -->
     <div class="cursor"></div>
     
+    <!-- 전체 화면 작업공간 -->
     <div id="app">
 
+    <!-- 글로벌 네비게이션 바 -->
     <div class="main-background">
     <div id="header_wrap">
         <header class="header_inner">
             <h1>
                 <a href="#">Art:ical</a>
             </h1>
+                    <!-- 우측 최상단 유틸메뉴 -->
                     <ul class="util_menu">
                         <li><a href="#" class="gnb">Home</a></li>
                         <li><a href="#" class="gnb">Login</a></li>
                         <li><a href="#" class="gnb">Sitemap</a></li>
                     </ul>
-
+                        <!-- 768px 사이즈에서의 사이드 네브바 버튼 -->
                         <input type="checkbox" id="menu" @click="sidemd = !sidemd">
                         <label for="menu">
                             <span></span>
                             <span></span>
                             <span></span>
                         </label>
-
+                    
+                    <!-- 네브바 안의 각각의 메뉴 -->
                     <nav id="nav">
-                        <h2 hidden>메인메뉴</h2>
-                        
                         <ul>
                             <li @mouseover="down1 = true" 
                             @mouseleave="down1 = false">
@@ -104,6 +102,7 @@
         </header>
     </div>
     </div>
+    <!-- introduce 의 4개의 컨텐츠 -->
     <div class="next1_wrap">
         <h4>Introduce</h4> <br><br>
         <div class="next1_container">
@@ -143,6 +142,7 @@
         </div>
     </div>
 
+    <!-- 타이핑이벤트 포함한 작품소개 컨텐츠 -->
     <div class="next2_wrap">
         <section>
             <div class="center">
@@ -210,6 +210,7 @@
         </section>
     </div>
 
+    <!-- 유튜브 영상 -->
     <div class="next3_wrap"> 
         <iframe width="100%" height="600" frameborder="0"
         src="https://www.youtube.com/embed/dlG4Dm5Q46o?autoplay=1&mute=1&controls=0"
@@ -220,6 +221,7 @@
         </iframe>
     </div>
 
+    <!-- 스크롤이벤트로 나오는 사진 3개 -->
     <div class="next4_wrap">
         <div class="left-side side side-left">
             <img src="./artical/s1.jpg" class="next4-img">
@@ -232,6 +234,7 @@
         </div>
     </div>
 
+    <!-- 하단 슬라이드쇼 -->
     <div class="next5_wrap">
         <div class="slideshow-container">
 
@@ -273,6 +276,7 @@
             
     </div>
 
+    <!-- 768px에서의 최하단 출처표 및 링크 -->
     <div class="next6_wrap_mobile">
         <div class="next6_wrap_mobile_content">
             <a class="next6_wrap_mobile_icon" href="https://www.instagram.com/jun_aay/?hl=en"><i class="fab fa-instagram"></i></a>
@@ -281,6 +285,7 @@
         </div>
     </div>
 
+    <!-- 최하단 출처표 및 링크 -->
     <div class="next6_wrap">
         <div class="copyright-container">
             <div class="copyright-content">
@@ -313,6 +318,7 @@
         </div>
     </div>
 
+    <!-- introduce에서 클릭시 나오는 모달창 -->
     <transition name="modal-fade">
         <div class="black-bg" v-if="modal1 == true">
             <div class="white-bg">
@@ -400,6 +406,7 @@
         </div>
         </transition>
 
+        <!-- 768px 에서의 사이드 네브바 -->
         <transition name="modal-side">
             <div class="sidemodal-bg" v-if="sidemd">
             </div>
@@ -450,6 +457,7 @@
     </script>
 
     <script>
+        //  마우스 커서의 좌표값을 받아 움직이는 마우스이벤트
         let mouseCursor = document.querySelector(".cursor");
         let navLinks = document.querySelectorAll(".gnb"); //메뉴 링크
         //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
@@ -463,6 +471,7 @@
     </script>
 
     <script>
+        // 마우스 이벤트에 호버 이벤트 추가
         navLinks.forEach((link) => {
             link.addEventListener("mouseover", () => {
                 mouseCursor.classList.add("cursor-grow");
@@ -478,6 +487,7 @@
     </script>
 
     <script>
+        // 스크롤 내릴때 컨텐츠 보여주는 이벤트
         const scTriggerMargin = 200;
         const scElementList = document.querySelectorAll('.sc');
 
@@ -495,6 +505,25 @@
     </script>
     
     <script>
+        // 스크롤 내릴때 컨텐츠 보여주는 이벤트 2
+        const scTriggerMargin2 = 100;
+        const scElementList2 = document.querySelectorAll('.side');
+
+        const scfunction2 = function() {
+            for(const element of scElementList2) {
+                if (!element.classList.contains('show')) {
+                    if (window.innerHeight > element.getBoundingClientRect().top + scTriggerMargin2) {
+                        element.classList.add('show');
+                    }
+                }
+            }
+        }
+        window.addEventListener('load',scfunction2);
+        window.addEventListener('scroll',scfunction2);
+    </script>
+
+    <script>
+        //  타이핑 이벤트
         const content = 
         "Lee Bae 이배, \n Dimensions / 245 x 340 (mm) \n Binding / Soft Cover Pages 32 \n ISBN 979-11-86724-03-3";
         const text = document.querySelector(".text");
@@ -512,6 +541,7 @@
     </script>
 
     <script>
+        //  타이핑 이벤트 2
         const content2 = 
         "Lee Bae 이배, \n Dimensions / 245 x 340 (mm) \n Binding / Harder Cover Pages 45 \n ISBN 956-09-86624-05-3";
         const text2 = document.querySelector(".text2");
@@ -529,6 +559,7 @@
     </script>
 
     <script>
+        // 슬라이드쇼 
         var slideIndex = 0;
         showSlides();
 
@@ -548,23 +579,6 @@
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
-    </script>
-
-    <script>
-        const scTriggerMargin2 = 100;
-        const scElementList2 = document.querySelectorAll('.side');
-
-        const scfunction2 = function() {
-            for(const element of scElementList2) {
-                if (!element.classList.contains('show')) {
-                    if (window.innerHeight > element.getBoundingClientRect().top + scTriggerMargin2) {
-                        element.classList.add('show');
-                    }
-                }
-            }
-        }
-        window.addEventListener('load',scfunction2);
-        window.addEventListener('scroll',scfunction2);
     </script>
 </body>
 </html>

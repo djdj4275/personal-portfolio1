@@ -1,3 +1,14 @@
+/* 폰트체 들고오기 */
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* < 마우스 이벤트 관련 > */
+/* 마우스 이벤트를 위해서 기존 커서 없애줌 */
 body {
     cursor: none;
 }
@@ -7,12 +18,7 @@ a:hover {
 button:hover {
     cursor: none;
 }
-@font-face {
-    font-family: 'MapoFlowerIsland';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* 마우스 커서를 대신할 div 디자인 */
 .cursor {
     width: 3rem;
     height: 3rem;
@@ -28,11 +34,23 @@ button:hover {
     backdrop-filter: sepia(20%);
     background-size: cover;
 }
+/* 마우스가 호버시 링크 색 변경 */
+.hovered-link {
+    color: khaki !important;
+}
+/* 마우스 호버시 추가되어서 마우스 크기 키울 클래스 */
+.cursor-grow {
+    transform: scale(2);
+    z-index: 100;
+}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 작업의 배경이 되는 공간 */
+/* 작업 전체공간 사이징*/
 #app {
     width: 100%;
     height: 100%;
 }
-
+/* 전체공간 크기와 배경사진 지정*/
 .main-background {
     background-image: url(./artical/SE-e7242ed4-1f02-41c8-8055-fd69e900f7e1.jpg);
     background-size: 100%;
@@ -40,11 +58,20 @@ button:hover {
     height: 700px;
     z-index: -100;
 }
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 최상단 글로벌 네브바 */
+/* 글로벌 네브바 감싸는 박스 */
 .header_wrap {
     background-color: black;
     opacity: 0.5;
     margin-bottom: 40px;
 }
+/* 글로벌 네브바 세부요소 감싸는 박스 */
+.header_inner {
+    position: relative;
+    height: 120px;
+}
+/* 글로벌 네브바 안의 요소들 디자인 */
 #header_wrap h1{
     font-family: 'MapoFlowerIsland';
     opacity: 0.8;
@@ -56,16 +83,88 @@ button:hover {
     color: white;
     font-size: 50px;
 }
-.header_inner {
-    position: relative;
-    height: 120px;
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 네브바속 세부메뉴 */
+#nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
 }
+
+#nav>ul>li {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+#nav>ul>li>a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    height: 45px;
+    padding-top: 10px;
+    opacity: 0.5;
+    font-family: 'MapoFlowerIsland';
+}
+
+#nav ul ul {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    width: 180px;
+    margin-left: -90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+}
+
+#nav ul ul li {
+    list-style: none;
+    font-family: 'MapoFlowerIsland';
+}
+
+#nav ul ul a {
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    height: 40px;
+    text-align: center;
+}
+/* 글로벌네브바 세부메뉴 내려오는 애니메이션 */
+.slide-enter-to,
+.slide-leave {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.slide-enter-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 유틸메뉴 감싸는 박스 */
 .util_menu {
     position: absolute;
     right: 0;
     top: 0;
     font-size: 12px;
 }
+/* 유틸메뉴 디자인 */
 .util_menu li {
     float: left;
     padding-left: 10px;
@@ -79,101 +178,37 @@ button:hover {
     color: white;
     opacity: 0.5;
 }
-#nav {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-}
-#nav > ul > li {
-    width: 25%;
-    float: left;
-    position: relative;
-}
-#nav > ul > li > a {
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    font-size: 13px;
-    text-align: center;
-    display: block;
-    height: 45px;
-    padding-top: 10px;
-    opacity: 0.5;
-    font-family: 'MapoFlowerIsland';
-}
-#nav ul ul {
-    position: absolute;
-    left: 50%;
-    top: 45px;
-    width: 180px;
-    margin-left: -90px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 0 0 10px 10px;
-}
-#nav ul ul li {
-    list-style: none;
-    font-family: 'MapoFlowerIsland';
-}
-#nav ul ul a {
-    text-decoration: none;
-    color: lightgray;
-    display: block;
-    height: 40px;
-    text-align: center;
-}
-.clear {
-    clear: both;
-}
-.next1_wrap {
-    background-color: white;
-    opacity: 1;
-}
-.open {
-    display: block;
-}
-.slide-enter-to, .slide-leave {
-    max-height: 100px;
-    overflow: hidden;
-}
-.slide-enter, .slide-leave-to {
-    overflow: hidden;
-    max-height: 0;
-}
-.slide-enter-active {
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-}
-.slide-leave-active {
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* introduce 컨텐츠 (컨텐츠 1)*/
+/* introduce 감싸는 박스 */
 .next1_wrap {
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
-}
-.next1_wrap h4 {
-    font-family: 'MapoFlowerIsland';
-    font-size: 20px;
-}
-.next1_item {
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 350px;
 }
 .next1_container {
     text-align: left;
     max-width: 1200px;
     margin: auto;
 }
+/* introduce안의 컨텐츠들 */
+.next1_item {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 350px;
+}
+/* introduce컨텐츠들 안의 작성글 디자인 */
 .next1_text {
     color: white;
     padding: 50px;
     width: 100px;
 }
+.next1_wrap h4 {
+    font-family: 'MapoFlowerIsland';
+    font-size: 20px;
+}
+/* introduce컨텐츠의 배경사진 */
 .d1 {
     background-image: url(./artical/1.jpg);
 }
@@ -186,6 +221,7 @@ button:hover {
 .d4 {
     background-image: url(./artical/4.jpg);
 }
+/* introduce 컨텐츠에서 호버 애니메이션 겹쳐질 흰색 박스 */
 .white_box {
     position: absolute;
     width: 100%;
@@ -197,35 +233,16 @@ button:hover {
 .white_box:hover {
     border: 30px solid white;
 }
-/*---------------------------------------------------------------------------------------*/
-
-/* hover된 링크의 글자 색상 정의(하얀색)*/
-/* .hovered-link 선택자명은 추후 JS로 추가할 예정!*/
-.hovered-link {
-    color: khaki !important;
-}
-/* .gnb li a:hover::after의 svg에 배경이미지 지정!*/
-
-.cursor-grow {
-    transform: scale(2);
-    z-index: 100;
-}
-
-
-.appli {
-    display: none;
-}
-
-.bottom-app {
-    display: none;
-}
-
+/* introduce컨텐츠의 모달창 띄우는 버튼 */
 .modal_btn {
     z-index: 1000;
     position: relative;
     font-size: 10px;
     font-family: 'MapoFlowerIsland';
 }
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 모달창 */
+/* 모달창 뒷 검은배경 */
 .black-bg {
     z-index: 10000;
     background-color: rgba(0, 0, 0, 0.8);
@@ -237,12 +254,7 @@ button:hover {
     height: 100%;
     padding: 20px;
 }
-.modal-fade-enter-active, .modal-fade-leave-active {
-    transition: opacity 0.5s;
-}
-.modal-fade-enter, .modal-fade-leave-to {
-    opacity: 0;
-}
+/* 모달창의 실질적 컨텐츠 표시되는 박스 부분 */
 .white-bg {
     position: fixed;
     width: 1200px;
@@ -254,6 +266,14 @@ button:hover {
     padding: 20px;
     color: white;
 }
+/* 모달창 띄울때의 애니메이션 */
+.modal-fade-enter-active, .modal-fade-leave-active {
+    transition: opacity 0.5s;
+}
+.modal-fade-enter, .modal-fade-leave-to {
+    opacity: 0;
+}
+/* 모달창 각각의 컨텐츠들 사진부분 */
 .image-bg1 {
     float: left;
     width: 500px;
@@ -286,12 +306,14 @@ button:hover {
     background-image: url(./artical/03.jpg);
     background-size: cover;
 }
+/* 모달창 각각의 컨텐츠들 내용부분 */
 .content-bg {
     float: left;
     width: 550px;
     height: 400px;
     font-family: 'MapoFlowerIsland';
 }
+/* 모달창 닫기 버튼 */
 .x {
     position: absolute;
     width: 30px; 
@@ -302,6 +324,7 @@ button:hover {
     right: 100px;
     top: 20px;
 }
+/* 모달창 안의 컨텐츠 추가디자인 */
 .content-bg h3 {
     text-align: center;
 }
@@ -311,22 +334,26 @@ button:hover {
     word-spacing: 10px;
     line-height: 30px;
 }
-
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 제품 타이핑 설명 컨텐츠 (컨텐츠 2) */
 .next2_wrap {
     clear: both;
     padding-top: 60px;
     padding-bottom: 60px;
 }
+/* 컨텐츠 2를 감싸는 박스 */
 section {
     position: relative;
     width: 100%;
     height: 1000px;
     text-align: center;
 }
+/* 컨텐츠 2를 두 줄로 나눈 각각의 박스*/
 .center {
     width: 100%;
     height: 400px;
 }
+/* 컨텐츠 2의 호버이벤트 설명이 나오는부분 박스*/
 .sc1 {
     position: absolute;
     background-color: black;
@@ -346,20 +373,24 @@ section {
     margin-top: 50px;
     margin-left: 50%;
 }
+/* 스크롤 이벤트를 받기위한 클래스 */
 .sc {
     opacity: 0;
     transition: all .5s ease;
 }
+/* 컨텐츠2의 호버시 오버레이 되기위한 클래스 */
 .sc-right {
     transform: translate(-200px,0);
 }
 .sc-left {
     transform: translate(200px,0);
 }
+/* 스크롤이벤트에서 추가될 클래스 */
 .sc.show {
     opacity: 1;
     transform: none;
 }
+/* 컨텐츠 2의 각각의 사진 */
 .sc-img1 {
     width:50%; 
     height: 300px; 
@@ -374,6 +405,7 @@ section {
     right: 30px; 
     top: 40px;
 }
+/* 컨텐츠2 안에 설명부분 */
 .ob:hover {
     color: white;
 }
@@ -406,7 +438,7 @@ section {
     left: 60px; 
     top: 40px;
 }
-
+/* 컨텐츠2 호버시 움직이며 오버레이될 박스 */
 .overlay {
     width: 100%; 
     height: 100%; 
@@ -431,6 +463,7 @@ section {
     margin-left: -100%;
     color: white;
 }
+/* 타이핑 이벤트가 적힐 박스 */
 .text_box{
     position: relative;
     top: 100px;
@@ -438,10 +471,12 @@ section {
     text-align: center;
     font-family: 'MapoFlowerIsland';
 }
+/* 타이핑 이벤트에서 타이핑과 같이 진행될 깜빡이는 div */
 .blink {
     animation: blink 1s infinite;
     font-size: 2.5rem;
 }
+/* 컨텐츠2의 3개로 나열된 박스 */
 .three-content {
     width:50%;
     height:400px;
@@ -463,6 +498,7 @@ section {
     display: inline-block;
     transition: all 1s ease;
 }
+/* 컨텐츠2의 3개로 나열된 박스의 이름(버튼) */
 .three-btn {
     width: 100px;
     height: 20px;
@@ -482,32 +518,36 @@ section {
 .three-block:hover .three-btn {
     opacity: 1;
 }
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* next3_wrap은 유튜브 컨텐츠이기에 css 디자인 없음 */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 스크롤 이벤트로 나오는 사진 3개 (컨텐츠 4) */
 .next4_wrap {
     width: 100%;
     height: 800px;
 }
+/* 컨텐츠 4의 각각의 위치 */
 .left-side {
     float: left;
     width: 33%;
     height: 600px;
-    background-color: black;
 }
 .center-side {
     float: left;
     width: 34%;
     height: 600px;
-    background-color: blue;
 }
 .right-side {
     float: left;
     width: 33%;
     height: 600px;
-    background-color: grey;
 }
+/* 컨텐츠 4의 각각의 크기 */
 .next4-img {
     width: 100%;
     height: 100%;
 }
+/* 컨텐츠 4 나올때의 애니메이션 */
 .side {
     opacity: 0;
     transition: all 0.8s ease;
@@ -525,13 +565,22 @@ section {
 .side-center {
     transform: scale(.5);
 }
-/*--------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 최하단 슬라이드쇼 (컨텐츠 5) */
+/* 슬라이드쇼 전체 감싸는 박스 */
 .mySlides {
     width: 100%;
     display: none;
     top: 30px;
     position: relative;
 }
+.slideshow-container {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    text-align: center;
+}
+/* 슬라이드쇼의 구간을 나누는 박스 */
 .slideshow-text {
     position: absolute;
     width: 50%;
@@ -540,24 +589,21 @@ section {
     font-family: 'MapoFlowerIsland';
     text-align: center;
 }
+/* 슬라이드쇼의 문자가 나오는 박스 */
 .slideshow-text-p {
     position: absolute;
     width: 100%;
     height: 30px;
     top: 45%;
 }
+/* 슬라이드쇼의 사진이 나오는 박스 */
 .slideshow-img {
     position: absolute;
     width: 50%; 
     height: 500px;
     right: 30px;
 }
-.slideshow-container {
-    width: 100%;
-    height: 600px;
-    background-color: black;
-    text-align: center;
-}
+/* 슬라이드쇼의 진행상태 도트 */
 .dot {
     top: 550px;
     position: relative;
@@ -569,9 +615,11 @@ section {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+/* 슬라이드쇼 이벤트에서 활성화된 사진에 추가될 클래스 */
 .active {
     background-color: khaki;
 }
+/* 슬라이드쇼 이벤트 트랜지션 */
 .fade {
     -webkit-animation-name: fade; /* -webkit은 크롬규격이기에 아래와 중복 */
     -webkit-animation-duration: 1.5s;
@@ -592,7 +640,9 @@ section {
     opacity: 0;
     }
 }
-/*---------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 768px에서 사용될 사이드네브바 */
+/* 사이드네브바 버튼 감싸는 박스 */
 input[id="menu"] + label {
     display: none;
     width: 60px;
@@ -602,6 +652,7 @@ input[id="menu"] + label {
     top: -40px;
     left: 15px;
 }
+/* 사이드네브바 버튼을 이루는 span 3개 (햄버거모양) */
 input[id="menu"] + label span {
     height: 4px;
     width: 60%;
@@ -612,9 +663,11 @@ input[id="menu"] + label span {
     z-index: 100000;
     transition: all 0.5s;
 }
+/* input 태그 안보이도록 해줌 */
 input[id="menu"] {
     display: none;
 }
+/* span 태그를 햄버거모양으로 만들기위해 위치지정 */
 input[id="menu"] + label span:nth-child(1) {
     top: 0;
 }
@@ -624,6 +677,7 @@ input[id="menu"] + label span:nth-child(2) {
 input[id="menu"] + label span:nth-child(3) {
     bottom: 0;
 }
+/* 햄버거 버튼 클릭시 바뀔 애니메이션 */
 input[id="menu"]:checked + label span:nth-child(1) {
     width: 50%;
     transform: rotate(45deg);
@@ -637,6 +691,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     transform: rotate(-45deg);
     bottom: 43%;
 }
+/* 사이드네브바 전체배경 */
 .sidemodal-bg {
     background-color: rgba(0, 0, 0, 0.5);
     border: solid 2px black; 
@@ -647,6 +702,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     height: 100%;
     padding: 20px;
 }
+/* 사이드네브바 박스 */
 .sidemodal-black {
     position: fixed;
     width: 50%;
@@ -655,6 +711,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     top: 0;
     background-color: black;
 }
+/* 사이드네브바 나올때의 트랜지션 설정 */
 .modal-side-enter-to {
     opacity: 1;
 }
@@ -695,6 +752,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     transition-duration: 0.5s;
     transition-timing-function: ease;
 }
+/* 사이드네브바 안의 세부메뉴 전체박스 */
 .sidemodal-nav {
     width:100%;
     height: 80%; 
@@ -702,6 +760,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     top: 60px; 
     position: absolute;
 }
+/* 사이드네브바 안의 세부메뉴 각각의 박스 */
 .sidemodal-list {
     margin: auto;
     width: 90%;
@@ -711,6 +770,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     color: gray;
     transition: all 1s ease;
 }
+/* 사이드네브바 세부메뉴 각각의 링크 */
 .sidemodal-link {
     text-decoration: none;
     transition: all 0.3s ease;
@@ -728,7 +788,9 @@ input[id="menu"]:checked + label span:nth-child(3) {
 .sidemodal-list:hover .sidemodal-link {
     color: black;
 }
-
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 최하단 출처및 링크 (컨텐츠 6) */
+/* 컨텐츠 6 전체박스 */
 .next6_wrap {
     width: 100%;
     height: 200px;
@@ -743,6 +805,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     font-size: 13px;
     font-family: 'MapoFlowerIsland';
 }
+/* 컨텐츠 6 각각의 컨텐츠 박스들 */
 .copyright-content {
     position: absolute;
     width: 50%;
@@ -776,7 +839,7 @@ input[id="menu"]:checked + label span:nth-child(3) {
     font-weight: bolder;
     bottom: 0;
 }
-
+/* 아이콘 링크 디자인 */
 i {
     font-size: 25px;
 }
@@ -789,7 +852,7 @@ i {
 .copyright-link:hover {
     color: gray;
 }
-
+/* 768px 때의 컨텐츠 6 양식 변경 */
 .next6_wrap_mobile {
     display: none;
     height:100px; 
@@ -826,7 +889,8 @@ i {
     display: inline;
     right: 0;
 }
-/*---------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* 반응형으로서 1024px 규격수정*/
 @media screen and (max-width:1024px) {
     .next1_container {
         max-width: 600px;
@@ -877,8 +941,8 @@ i {
         height: 400px;
     }
 }
+/* 반응형으로서 768px 규격수정*/
 @media screen and (max-width:768px) {
-    /* 헤더 영역 */
     #header_wrap{background: none;}
     .header_inner{height: auto;}
     #header_wrap h1{background-color: black;padding: 0;}
