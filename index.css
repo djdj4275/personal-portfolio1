@@ -524,7 +524,7 @@ section {
 /* 스크롤 이벤트로 나오는 사진 3개 (컨텐츠 4) */
 .next4_wrap {
     width: 100%;
-    height: 800px;
+    height: 600px;
 }
 /* 컨텐츠 4의 각각의 위치 */
 .left-side {
@@ -938,6 +938,12 @@ i {
         height: 500px;
     }
     .side {
+        height: 400px;
+    }
+    .next3_wrap {
+        display: inline;
+    }
+    .next4_wrap {
         height: 400px;
     }
 }
