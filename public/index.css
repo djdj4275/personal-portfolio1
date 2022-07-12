@@ -76,7 +76,7 @@ button:hover {
     font-family: 'MapoFlowerIsland';
     opacity: 0.8;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 #header_wrap h1 a {
     text-decoration: none;
@@ -160,8 +160,8 @@ button:hover {
 /* 유틸메뉴 감싸는 박스 */
 .util_menu {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 20px;
     font-size: 12px;
 }
 /* 유틸메뉴 디자인 */
@@ -260,8 +260,9 @@ button:hover {
     width: 1200px;
     height: 600px;
     background-color: rgba(0, 0, 0, 0);
-    top: 100px;
-    left: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 8px;
     padding: 20px;
     color: white;
@@ -419,10 +420,10 @@ section {
     font-size: 15px;
     line-height: 25px;
     transition: all 2s ease;
-    width: 200px; 
+    width: 150px; 
     height: 300px; 
     position: absolute; 
-    right: 60px; 
+    right: 40px; 
     top: 40px;
 }
 .ob2 {
@@ -432,10 +433,10 @@ section {
     font-size: 15px;
     line-height: 25px;
     transition: all 2s ease;
-    width: 200px; 
+    width: 150px; 
     height: 300px; 
     position: absolute; 
-    left: 60px; 
+    left: 40px; 
     top: 40px;
 }
 /* 컨텐츠2 호버시 움직이며 오버레이될 박스 */
@@ -936,12 +937,13 @@ i {
     }
     .next3_wrap {
         height: 500px;
+        display: inline;
+    }
+    .next3_wrap iframe {
+        border: none;
     }
     .side {
         height: 400px;
-    }
-    .next3_wrap {
-        display: inline;
     }
     .next4_wrap {
         height: 400px;
